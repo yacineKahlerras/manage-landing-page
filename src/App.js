@@ -13,8 +13,8 @@ export default function App() {
       <main>
         <Hero />
         <Functionality />
-        <Reviews />
       </main>
+      <Reviews />
       <Footer />
     </>
   );
