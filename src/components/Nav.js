@@ -1,5 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import logo from "../images/logo.svg";
+import hamburger from "../images/icon-hamburger.svg";
+import closeSubmenu from "../images/icon-close.svg";
 
 export default function Nav() {
-  return <nav></nav>;
+  const [activeSubmenu, setActiveSubmenu] = useState(false);
+
+  return (
+    <nav>
+      <div className="nav-center">
+        <img src={logo} alt="logo" />
+        <NavLinks />
+        <button className="get-started-btn">Get Started</button>
+        <button
+          className="submenu-btn"
+          aria-label="submenu"
+          onClick={() => setActiveSubmenu(!activeSubmenu)}
+        >
+          <img
+            src={activeSubmenu ? closeSubmenu : hamburger}
+            alt="submenu icon"
+          />
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+function NavLinks() {
+  const navLinksTexts = [
+    "Pricing",
+    "Product",
+    "About Us",
+    "Careers",
+    "Community",
+  ];
+
+  const navElements = navLinksTexts.map((n, index) => (
+    <li>
+      <button>{n}</button>
+    </li>
+  ));
+
+  return <ul>{navElements}</ul>;
 }
