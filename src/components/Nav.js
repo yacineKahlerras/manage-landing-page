@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../images/logo.svg";
 import hamburger from "../images/icon-hamburger.svg";
 import closeSubmenu from "../images/icon-close.svg";
+import SideMenu from "./Sidemenu";
 
 export default function Nav() {
   const [activeSubmenu, setActiveSubmenu] = useState(false);
@@ -23,6 +24,7 @@ export default function Nav() {
           />
         </button>
       </div>
+      <SideMenu />
     </nav>
   );
 }
