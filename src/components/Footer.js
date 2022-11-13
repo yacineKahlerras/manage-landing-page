@@ -53,7 +53,28 @@ function BottomSection() {
         </div>
 
         {/* footer links */}
-        <div className="footer-links-container"></div>
+        <div className="footer-links-container">
+          <ul className="left-side">
+            <li>Home</li>
+            <li>Pricing</li>
+            <li>Products</li>
+            <li>About Us</li>
+          </ul>
+          <ul className="right-side">
+            <li>Careers</li>
+            <li>Community</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+        {/* email form */}
+        <form>
+          <input type="email" placeholder="Updates in your inbox…"></input>
+          <button>Go</button>
+        </form>
+
+        {/* copyright */}
+        <p>Copyright 2020. All Rights Reserved</p>
       </div>
     </div>
   );
