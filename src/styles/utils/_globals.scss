@@ -7,6 +7,12 @@
   --Very-Dark-Blue: hsl(233, 12%, 13%);
   --Very-Pale-Red: hsl(13, 100%, 96%);
   --Vary-Light-Gray: hsl(0, 0%, 98%);
+
+  --font-size-1: clamp(3rem, 8.1vw, 4rem);
+  --font-size-2: clamp(2.5rem, 6vw, 3.5rem);
+  --font-size-3: clamp(1.4rem, 3.7vw, 1.6rem);
+
+  --max-width-1: min(100%, 100rem);
 }
 
 @mixin desktop {
@@ -18,12 +24,20 @@
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: var(--font-size-3);
 
   h1 {
-    color: white;
-    letter-spacing: 0.46em;
-    font-size: 3.8rem;
+    font-size: var(--font-size-1);
     font-weight: 700;
+  }
+  h2 {
+    font-size: var(--font-size-2);
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 }

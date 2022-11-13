@@ -42,5 +42,5 @@ function NavLinks() {
     </li>
   ));
 
-  return <ul>{navElements}</ul>;
+  return <ul className="nav-links">{navElements}</ul>;
 }
