@@ -24,6 +24,19 @@ nav {
         display: flex;
       }
 
+      .nav-links {
+        gap: 1.5rem;
+        font-weight: 500;
+
+        li button {
+          color: var(--Dark-Blue);
+
+          &:hover {
+            color: var(--Dark-Grayish-Blue);
+          }
+        }
+      }
+
       .submenu-btn {
         display: none;
       }

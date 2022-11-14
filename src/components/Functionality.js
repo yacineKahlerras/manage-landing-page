@@ -30,7 +30,7 @@ const manageFeaturesContents = [
 export default function Functionality() {
   const elements = manageFeaturesContents.map((elm, index) => {
     return (
-      <div className="feature">
+      <div key={index} className="feature">
         <div className="title">
           <span className="title-index">0{index + 1}</span>
           <h3>{elm.title}</h3>

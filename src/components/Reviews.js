@@ -41,9 +41,9 @@ const reviewsContent = [
 ];
 
 export default function Reviews() {
-  const reviewsElements = reviewsContent.map((r) => {
+  const reviewsElements = reviewsContent.map((r, index) => {
     return (
-      <div className="review">
+      <div key={index} className="review">
         <img src={r.img} alt={r.name} />
         <h3>{r.name}</h3>
         <p>{r.comment}</p>

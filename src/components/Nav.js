@@ -46,7 +46,7 @@ function NavLinks() {
   ];
 
   const navElements = navLinksTexts.map((n, index) => (
-    <li>
+    <li key={index}>
       <button>{n}</button>
     </li>
   ));
