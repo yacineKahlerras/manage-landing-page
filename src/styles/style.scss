@@ -1,2 +1,8 @@
 @use "utils";
 @use "componentsStyles";
+
+main {
+  width: var(--max-width-1);
+  padding: 0 3rem;
+  margin: 0 auto;
+}

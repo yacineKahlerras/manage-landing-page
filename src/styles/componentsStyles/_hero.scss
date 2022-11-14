@@ -1,0 +1,39 @@
+@use "../utils" as *;
+
+.hero {
+  width: var(--max-width-1);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+
+  .img-side {
+    width: min(100%, 46.7rem);
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.text-side {
+  width: min(100%, 46.7rem);
+  text-align: center;
+
+  p {
+    max-width: 33.7rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  @include desktop {
+    text-align: left;
+
+    p {
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+  }
+}
