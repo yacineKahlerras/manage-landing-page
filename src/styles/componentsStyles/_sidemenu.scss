@@ -1,1 +1,45 @@
 @use "../utils" as *;
+
+.sidemenu {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition-1);
+
+  &-center {
+    width: min(90%, 28.5rem);
+    background: white;
+    padding: 3rem 0;
+
+    position: absolute;
+    top: 15rem;
+    left: 150%;
+    transform: translateX(-50%);
+
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+
+    transition: var(--transition-1);
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  &.sidemenu-active {
+    opacity: 1;
+    z-index: 3;
+
+    .sidemenu-center {
+      left: 50%;
+    }
+  }
+}

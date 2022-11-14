@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function SideMenu() {
+export default function SideMenu({ activeSubmenu, setActiveSubmenu }) {
   return (
-    <aside className="sidemenu">
+    <aside className={`sidemenu ${activeSubmenu ? "sidemenu-active" : ""}`}>
       <ul className="sidemenu-center">
         <li>Pricing</li>
         <li>Product</li>

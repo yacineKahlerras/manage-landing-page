@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../images/logo.svg";
 import hamburger from "../images/icon-hamburger.svg";
 import closeSubmenu from "../images/icon-close.svg";
@@ -6,6 +6,10 @@ import SideMenu from "./Sidemenu";
 
 export default function Nav() {
   const [activeSubmenu, setActiveSubmenu] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = activeSubmenu ? "hidden" : "auto";
+  }, [activeSubmenu]);
 
   return (
     <nav>
@@ -24,7 +28,10 @@ export default function Nav() {
           />
         </button>
       </div>
-      <SideMenu />
+      <SideMenu
+        activeSubmenu={activeSubmenu}
+        setActiveSubmenu={setActiveSubmenu}
+      />
     </nav>
   );
 }

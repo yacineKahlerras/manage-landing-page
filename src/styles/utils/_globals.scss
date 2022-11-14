@@ -13,6 +13,8 @@
   --font-size-3: clamp(1.4rem, 3.7vw, 1.6rem);
 
   --max-width-1: min(100%, 100rem);
+
+  --transition-1: 0.5s;
 }
 
 @mixin desktop {
