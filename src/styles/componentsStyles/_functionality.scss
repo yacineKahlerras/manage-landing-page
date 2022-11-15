@@ -2,10 +2,16 @@
 
 .functionality {
   width: var(--max-width-1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  place-items: center;
   margin-bottom: 5rem;
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
 
   .features-side {
     display: flex;
@@ -25,7 +31,7 @@
 
         &::before {
           content: "";
-          width: 150%;
+          width: 100%;
           height: 100%;
           position: absolute;
           top: 0;
@@ -35,7 +41,7 @@
           border-radius: var(--border-radius-1);
 
           @include desktop {
-            background: transparent;
+            display: none;
           }
         }
 
