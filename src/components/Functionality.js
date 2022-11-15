@@ -53,7 +53,7 @@ export default function Functionality() {
       </div>
 
       {/* right side */}
-      {elements}
+      <div className="features-side">{elements}</div>
     </div>
   );
 }
