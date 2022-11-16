@@ -4,9 +4,8 @@ import anishaImg from "../images/avatar-anisha.png";
 import richardImg from "../images/avatar-richard.png";
 import shanaiImg from "../images/avatar-shanai.png";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const reviewsContent = [
   {
@@ -45,23 +44,15 @@ const reviewsContent = [
 ];
 
 export default function Reviews() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 60000,
-    pauseOnHover: true,
-  };
-
   const reviewsElements = reviewsContent.map((r, index) => {
     return (
-      <div key={index} className="review">
-        <img src={r.img} alt={r.name} />
-        <h3>{r.name}</h3>
-        <p>{r.comment}</p>
-      </div>
+      <SwiperSlide>
+        <div key={index} className="review">
+          <img src={r.img} alt={r.name} />
+          <h3>{r.name}</h3>
+          <p>{r.comment}</p>
+        </div>
+      </SwiperSlide>
     );
   });
 
@@ -69,7 +60,14 @@ export default function Reviews() {
     <div className="reviews">
       <h2>What they’ve said</h2>
       <div className="reviews-container">
-        <Slider {...settings}>{reviewsElements}</Slider>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={3}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {reviewsElements}
+        </Swiper>
       </div>
       <button className="get-started-btn">Get Started</button>
     </div>
