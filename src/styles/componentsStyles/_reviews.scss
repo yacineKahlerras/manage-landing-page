@@ -1,12 +1,17 @@
 @use "../utils" as *;
 
 .reviews {
+  width: 100vw;
+  overflow: hidden;
+
   h2,
   .reviews-container {
     margin-bottom: 5rem;
   }
 
   .reviews-container {
+    width: max(100%, 100rem);
+
     .review {
       background: var(--Vary-Light-Gray);
     }

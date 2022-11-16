@@ -60,12 +60,7 @@ export default function Reviews() {
     <div className="reviews">
       <h2>What they’ve said</h2>
       <div className="reviews-container">
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
+        <Swiper centeredSlides={true} spaceBetween={30} slidesPerView={3.1}>
           {reviewsElements}
         </Swiper>
       </div>
