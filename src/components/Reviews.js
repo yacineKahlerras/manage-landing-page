@@ -3,6 +3,7 @@ import aliImg from "../images/avatar-ali.png";
 import anishaImg from "../images/avatar-anisha.png";
 import richardImg from "../images/avatar-richard.png";
 import shanaiImg from "../images/avatar-shanai.png";
+import Slider from "react-slick";
 
 const reviewsContent = [
   {
@@ -41,6 +42,16 @@ const reviewsContent = [
 ];
 
 export default function Reviews() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+  };
+
   const reviewsElements = reviewsContent.map((r, index) => {
     return (
       <div key={index} className="review">
@@ -54,7 +65,30 @@ export default function Reviews() {
   return (
     <div className="reviews">
       <h2>What they’ve said</h2>
-      <div className="reviews-container">{reviewsElements}</div>
+      {/* <div className="reviews-container">{reviewsElements}</div> */}
+      {/* <Slider {...settings}>{reviewsElements}</Slider> */}
+      <div className="reviews-container">
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
+      </div>
       <button className="get-started-btn">Get Started</button>
     </div>
   );
