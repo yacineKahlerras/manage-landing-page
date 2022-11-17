@@ -1,9 +1,5 @@
 @use "../utils" as *;
 
-footer {
-  width: 100%;
-}
-
 .footer-top-section {
   width: 100%;
   display: grid;
@@ -60,4 +56,13 @@ footer {
 .footer-bottom-section {
   background: var(--Very-Dark-Blue);
   color: white;
+
+  li {
+    img {
+      &:hover {
+        filter: invert(49%) sepia(54%) saturate(3505%) hue-rotate(339deg)
+          brightness(99%) contrast(92%);
+      }
+    }
+  }
 }
