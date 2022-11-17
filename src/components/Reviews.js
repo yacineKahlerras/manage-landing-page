@@ -6,6 +6,9 @@ import shanaiImg from "../images/avatar-shanai.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/bundle";
+import { Pagination } from "swiper";
 
 const reviewsContent = [
   {
@@ -46,8 +49,8 @@ const reviewsContent = [
 export default function Reviews() {
   const reviewsElements = reviewsContent.map((r, index) => {
     return (
-      <SwiperSlide>
-        <div key={index} className="review">
+      <SwiperSlide key={index}>
+        <div className="review">
           <img src={r.img} alt={r.name} />
           <h3>{r.name}</h3>
           <p>{r.comment}</p>
@@ -60,7 +63,13 @@ export default function Reviews() {
     <div className="reviews">
       <h2>What they’ve said</h2>
       <div className="reviews-container">
-        <Swiper centeredSlides={true} spaceBetween={30} slidesPerView={3.1}>
+        <Swiper
+          pagination={true}
+          modules={[Pagination]}
+          centeredSlides={true}
+          spaceBetween={30}
+          slidesPerView="auto"
+        >
           {reviewsElements}
         </Swiper>
       </div>
