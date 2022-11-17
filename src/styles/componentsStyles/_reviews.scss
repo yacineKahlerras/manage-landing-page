@@ -10,19 +10,8 @@
   }
 
   .reviews-container {
-    margin-bottom: 4rem;
-  }
-
-  .reviews-container {
     width: 100%;
-
-    .swiper {
-      overflow: visible;
-    }
-
-    .swiper-slide {
-      width: min(80%, 50rem) !important;
-    }
+    margin-bottom: 5.5rem;
 
     .review {
       padding: 5rem 0rem;
@@ -47,5 +36,22 @@
         margin: 0 auto;
       }
     }
+  }
+}
+
+// swiper
+.swiper {
+  overflow: visible;
+
+  .swiper-slide {
+    width: min(80%, 50rem) !important;
+  }
+
+  .bobo {
+    background: var(--Bright-Red);
+  }
+
+  .swiper-pagination-horizontal {
+    bottom: -3rem !important;
   }
 }

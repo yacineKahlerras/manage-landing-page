@@ -7,8 +7,7 @@ import shanaiImg from "../images/avatar-shanai.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/bundle";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 
 const reviewsContent = [
   {
@@ -64,8 +63,18 @@ export default function Reviews() {
       <h2>What they’ve said</h2>
       <div className="reviews-container">
         <Swiper
-          pagination={true}
-          modules={[Pagination]}
+          loop={true}
+          initialSlide={1}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          grabCursor={true}
+          pagination={{
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet bobo",
+          }}
+          modules={[Pagination, Autoplay]}
           centeredSlides={true}
           spaceBetween={30}
           slidesPerView="auto"
