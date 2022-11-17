@@ -19,7 +19,7 @@ function TopSection() {
   return (
     <div className="footer-top-section">
       <div className="footer-top-section-center">
-        <h2>Simplify how your team works today. Get Started</h2>
+        <h2>Simplify how your team works today.</h2>
         <button className="get-started-btn">Get Started</button>
       </div>
     </div>

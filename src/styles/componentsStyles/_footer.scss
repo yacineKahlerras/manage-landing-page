@@ -1,0 +1,16 @@
+@use "../utils" as *;
+
+footer {
+  width: 100%;
+}
+
+.footer-top-section {
+  width: 100%;
+  display: grid;
+  place-items: center;
+
+  .footer-top-section-center {
+    width: min(80%, 41.6rem);
+    text-align: center;
+  }
+}
