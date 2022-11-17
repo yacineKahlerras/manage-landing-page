@@ -56,6 +56,73 @@
 .footer-bottom-section {
   background: var(--Very-Dark-Blue);
   color: white;
+  display: grid;
+  place-items: center;
+  padding: 5rem 0;
+
+  &-center {
+    width: min(80%, 46.7rem);
+    display: grid;
+    gap: 5rem;
+
+    form {
+      width: 100%;
+      grid-row: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+
+      input {
+        width: 100%;
+        padding: 1em 2em;
+        border-radius: var(--border-radius-1);
+      }
+      button {
+        background: var(--Bright-Red);
+        padding: 1em 2em;
+        border-radius: var(--border-radius-1);
+        color: white;
+      }
+    }
+
+    .footer-links-container {
+      display: flex;
+      justify-content: center;
+      grid-row: 2;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+
+        li:hover {
+          color: var(--Bright-Red);
+        }
+      }
+    }
+
+    .logo-socials {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .socials-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+
+        img {
+          width: 3rem;
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+  }
 
   li {
     img {
