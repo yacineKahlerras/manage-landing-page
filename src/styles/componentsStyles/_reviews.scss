@@ -41,7 +41,7 @@
 
 // swiper
 .swiper {
-  overflow: visible;
+  overflow: visible !important;
 
   .swiper-slide {
     width: min(80%, 50rem) !important;

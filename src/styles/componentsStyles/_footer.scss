@@ -63,13 +63,14 @@
   &-center {
     width: min(80%, 46.7rem);
     display: grid;
-    gap: 5rem;
+    gap: 5.6rem;
 
     @include desktop {
       width: var(--max-width-2);
       grid-template-columns: 25% 25% auto;
       grid-template-rows: repeat(2, auto);
       justify-content: space-between;
+      gap: 0rem;
     }
 
     form {
@@ -83,6 +84,7 @@
       @include desktop {
         grid-column: 3;
         margin-left: auto;
+        margin-bottom: 4.5rem;
       }
 
       input {

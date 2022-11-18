@@ -94,6 +94,20 @@ function BottomSection() {
 
         {/* copyright */}
         <p>Copyright 2020. All Rights Reserved</p>
+
+        {/* this is a notification component */}
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
     </div>
   );
@@ -149,19 +163,6 @@ function EmailForm() {
         ></input>
         <button>Go</button>
       </form>
-      {/* this is a notification component */}
-      <ToastContainer
-        position="top-center"
-        autoClose={2000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
     </>
   );
 }
