@@ -85,14 +85,25 @@ function BottomSection() {
         </div>
 
         {/* email form */}
-        <form>
-          <input type="email" placeholder="Updates in your inbox…"></input>
-          <button>Go</button>
-        </form>
+        <EmailForm />
 
         {/* copyright */}
         <p>Copyright 2020. All Rights Reserved</p>
       </div>
     </div>
+  );
+}
+
+/* email form */
+function EmailForm() {
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
+      <input type="email" placeholder="Updates in your inbox…"></input>
+      <button type="button">Go</button>
+    </form>
   );
 }
