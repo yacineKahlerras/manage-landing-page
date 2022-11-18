@@ -89,6 +89,20 @@
         width: 100%;
         padding: 1em 2em;
         border-radius: var(--border-radius-1);
+        border: 0.2rem solid transparent;
+
+        &:focus,
+        &:active {
+          outline: none;
+          border-color: transparent;
+        }
+
+        &.input-success {
+          border-color: rgb(97, 255, 97);
+        }
+        &.input-error {
+          border-color: rgb(255, 85, 85);
+        }
       }
       button {
         background: var(--Bright-Red);

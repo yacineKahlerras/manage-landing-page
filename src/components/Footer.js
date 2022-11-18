@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import fbIcon from "../images/icon-facebook.svg";
 import ytbIcon from "../images/icon-youtube.svg";
@@ -101,6 +101,8 @@ function BottomSection() {
 
 /* email form */
 function EmailForm() {
+  const [emailState, setEmailState] = useState("");
+
   const notificationOptions = {
     position: "top-center",
     autoClose: 2000,
@@ -115,17 +117,32 @@ function EmailForm() {
   function formSubmit(event) {
     event.preventDefault();
     const isValid = validateEmail(event.target.elements["email"]);
-    if (isValid === "valid")
+    if (isValid === "valid") {
       toast.success("Thanks For Contacting ✨", notificationOptions);
-    else if (isValid === "novalid")
+      setEmailState("sucess");
+    } else if (isValid === "novalid") {
       toast.error("check email format 💀", notificationOptions);
-    else toast.warn("email field is empty 🐌", notificationOptions);
+      setEmailState("error");
+    } else {
+      toast.error("email field is empty 🐌", notificationOptions);
+      setEmailState("error");
+    }
   }
 
   return (
     <>
       <form id="signup" noValidate onSubmit={formSubmit}>
         <input
+          onChange={() => {
+            setEmailState("");
+          }}
+          className={
+            emailState === "sucess"
+              ? "input-success"
+              : emailState === "error"
+              ? "input-error"
+              : ""
+          }
           name="email"
           type="email"
           placeholder="Updates in your inbox…"
