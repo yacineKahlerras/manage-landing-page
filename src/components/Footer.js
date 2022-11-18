@@ -1,10 +1,14 @@
 import React from "react";
+
 import fbIcon from "../images/icon-facebook.svg";
 import ytbIcon from "../images/icon-youtube.svg";
 import twitterIcon from "../images/icon-twitter.svg";
 import pinterestIcon from "../images/icon-pinterest.svg";
 import instaIcon from "../images/icon-instagram.svg";
+
 import { validateEmail } from "./EmailValidation";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Footer() {
   return (
@@ -97,21 +101,47 @@ function BottomSection() {
 
 /* email form */
 function EmailForm() {
+  const notificationOptions = {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  };
+
+  function formSubmit(event) {
+    event.preventDefault();
+    const isValid = validateEmail(event.target.elements["email"]);
+    if (isValid) toast.success("Thanks For Contacting ✨", notificationOptions);
+    else toast.error("email is not valid 💀", notificationOptions);
+  }
+
   return (
-    <form
-      id="signup"
-      noValidate
-      onSubmit={(e) => {
-        e.preventDefault();
-        validateEmail(e.target.elements["email"]);
-      }}
-    >
-      <input
-        name="email"
-        type="email"
-        placeholder="Updates in your inbox…"
-      ></input>
-      <button>Go</button>
-    </form>
+    <>
+      <form id="signup" noValidate onSubmit={formSubmit}>
+        <input
+          name="email"
+          type="email"
+          placeholder="Updates in your inbox…"
+        ></input>
+        <button>Go</button>
+      </form>
+      {/* this is a notification component */}
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+    </>
   );
 }
