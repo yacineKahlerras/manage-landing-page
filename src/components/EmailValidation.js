@@ -8,8 +8,7 @@ function hasValue(input) {
 export function validateEmail(input) {
   // check if the value is not empty
   if (!hasValue(input)) {
-    console.log("trying to rob me of a value senior ? :(");
-    return false;
+    return "empty";
   }
   // validate email format
   const emailRegex =
@@ -17,9 +16,7 @@ export function validateEmail(input) {
 
   const email = input.value.trim();
   if (!emailRegex.test(email)) {
-    console.log("no no...novalid senior :(");
-    return false;
+    return "novalid";
   }
-  console.log("andaré andaré andarééééé :D");
-  return true;
+  return "valid";
 }

@@ -115,8 +115,11 @@ function EmailForm() {
   function formSubmit(event) {
     event.preventDefault();
     const isValid = validateEmail(event.target.elements["email"]);
-    if (isValid) toast.success("Thanks For Contacting ✨", notificationOptions);
-    else toast.error("email is not valid 💀", notificationOptions);
+    if (isValid === "valid")
+      toast.success("Thanks For Contacting ✨", notificationOptions);
+    else if (isValid === "novalid")
+      toast.error("check email format 💀", notificationOptions);
+    else toast.warn("email field is empty 🐌", notificationOptions);
   }
 
   return (
