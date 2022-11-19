@@ -1,5 +1,6 @@
 @use "utils" as *;
 @use "componentsStyles/home";
+@use "pricingStyles";
 
 main {
   width: var(--max-width-1);
