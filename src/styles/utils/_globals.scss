@@ -19,6 +19,9 @@
 
   --transition-1: 0.5s ease-in-out;
   --border-radius-1: 2em;
+
+  --bg-simplify-section-mobile: url("../../images/bg-simplify-section-mobile.svg");
+  --bg-simplify-section-desktop: url("../../images/bg-simplify-section-desktop.svg");
 }
 
 @mixin desktop {

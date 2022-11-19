@@ -1,5 +1,5 @@
 @use "utils" as *;
-@use "componentsStyles";
+@use "componentsStyles/home";
 
 main {
   width: var(--max-width-1);
