@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import logo from "../images/logo.svg";
-import hamburger from "../images/icon-hamburger.svg";
-import closeSubmenu from "../images/icon-close.svg";
+import logo from "../../images/logo.svg";
+import hamburger from "../../images/icon-hamburger.svg";
+import closeSubmenu from "../../images/icon-close.svg";
 import SideMenu from "./Sidemenu";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [activeSubmenu, setActiveSubmenu] = useState(false);
@@ -14,7 +15,9 @@ export default function Nav() {
   return (
     <nav>
       <div className="nav-center">
-        <img src={logo} alt="logo" />
+        <Link to={"/"}>
+          <img src={logo} alt="logo" />
+        </Link>
         <NavLinks />
         <button className="get-started-btn">Get Started</button>
         <button
@@ -47,7 +50,9 @@ function NavLinks() {
 
   const navElements = navLinksTexts.map((n, index) => (
     <li key={index}>
-      <button>{n}</button>
+      <Link to={`${n}`}>
+        <button>{n}</button>
+      </Link>
     </li>
   ));
 

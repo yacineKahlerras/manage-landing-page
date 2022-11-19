@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Functionality from "../components/Functionality";
-import Reviews from "../components/Reviews";
+import Hero from "../components/Home/Hero";
+import Functionality from "../components/Home/Functionality";
+import Reviews from "../components/Home/Reviews";
 
 export default function Home() {
   return (

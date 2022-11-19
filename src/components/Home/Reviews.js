@@ -1,8 +1,8 @@
 import React from "react";
-import aliImg from "../images/avatar-ali.png";
-import anishaImg from "../images/avatar-anisha.png";
-import richardImg from "../images/avatar-richard.png";
-import shanaiImg from "../images/avatar-shanai.png";
+import aliImg from "../../images/avatar-ali.png";
+import anishaImg from "../../images/avatar-anisha.png";
+import richardImg from "../../images/avatar-richard.png";
+import shanaiImg from "../../images/avatar-shanai.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

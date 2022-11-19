@@ -1,5 +1,5 @@
 import React from "react";
-import imgSideImgs from "../images/illustration-intro.svg";
+import imgSideImgs from "../../images/illustration-intro.svg";
 
 export default function Hero() {
   return (

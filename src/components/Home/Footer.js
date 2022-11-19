@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import fbIcon from "../images/icon-facebook.svg";
-import ytbIcon from "../images/icon-youtube.svg";
-import twitterIcon from "../images/icon-twitter.svg";
-import pinterestIcon from "../images/icon-pinterest.svg";
-import instaIcon from "../images/icon-instagram.svg";
+import fbIcon from "../../images/icon-facebook.svg";
+import ytbIcon from "../../images/icon-youtube.svg";
+import twitterIcon from "../../images/icon-twitter.svg";
+import pinterestIcon from "../../images/icon-pinterest.svg";
+import instaIcon from "../../images/icon-instagram.svg";
 
 import { validateEmail } from "./EmailValidation";
 import { ToastContainer, toast } from "react-toastify";
