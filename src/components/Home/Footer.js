@@ -79,9 +79,7 @@ function BottomSection() {
         <div className="footer-links-container">
           <ul className="left-side">
             <li>
-              <Link to={`/`} preventScrollReset={false}>
-                Home
-              </Link>{" "}
+              <Link to={`/`}>Home</Link>{" "}
             </li>
             <li>
               <Link to={`Pricing`}>Pricing</Link>{" "}
