@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/manage-landing-page/static/css/main.8777621c.css",
-    "main.js": "/manage-landing-page/static/js/main.3890a333.js",
+    "main.js": "/manage-landing-page/static/js/main.cbbaad5d.js",
     "static/media/pricing.svg": "/manage-landing-page/static/media/pricing.5f4788ed2b7e9994261cddcdd16bdf6c.svg",
     "static/media/careers.svg": "/manage-landing-page/static/media/careers.e5ca60901b5dc07237320a860088501c.svg",
     "static/media/product.svg": "/manage-landing-page/static/media/product.090229b96086e5fe321b9d2bdc1e8abd.svg",
@@ -25,10 +25,10 @@
     "static/media/bg-simplify-section-mobile.svg": "/manage-landing-page/static/media/bg-simplify-section-mobile.a79c8471fa284189552d.svg",
     "static/media/icon-hamburger.svg": "/manage-landing-page/static/media/icon-hamburger.8dcf47cc6f3180ad040f1173f3592504.svg",
     "main.8777621c.css.map": "/manage-landing-page/static/css/main.8777621c.css.map",
-    "main.3890a333.js.map": "/manage-landing-page/static/js/main.3890a333.js.map"
+    "main.cbbaad5d.js.map": "/manage-landing-page/static/js/main.cbbaad5d.js.map"
   },
   "entrypoints": [
     "static/css/main.8777621c.css",
-    "static/js/main.3890a333.js"
+    "static/js/main.cbbaad5d.js"
   ]
 }
