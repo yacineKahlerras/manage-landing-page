@@ -35,6 +35,8 @@ body {
   font-weight: 400;
   font-size: var(--font-size-3);
   color: var(--Dark-Blue);
+  overflow: hidden;
+  position: relative;
 
   h1 {
     font-size: var(--font-size-1);
