@@ -3,7 +3,7 @@
 
   --Bright-Red: hsl(12, 88%, 59%);
   --Bright-Red-hover: hsl(12, 85%, 62%);
-  --Dark-Blue: hsl(228, 39%, 23%);
+  --Dark-Blue: #242d52;
   --Dark-Grayish-Blue: hsl(227, 12%, 61%);
   --Very-Dark-Blue: hsl(233, 12%, 13%);
   --Very-Pale-Red: hsl(13, 100%, 96%);
@@ -67,5 +67,10 @@ body {
         background: var(--Bright-Red-hover);
       }
     }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }

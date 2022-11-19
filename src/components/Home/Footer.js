@@ -9,6 +9,7 @@ import instaIcon from "../../images/icon-instagram.svg";
 import { validateEmail } from "./EmailValidation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -77,15 +78,31 @@ function BottomSection() {
         {/* footer links */}
         <div className="footer-links-container">
           <ul className="left-side">
-            <li>Home</li>
-            <li>Pricing</li>
-            <li>Products</li>
-            <li>About Us</li>
+            <li>
+              <Link to={`/`} preventScrollReset={false}>
+                Home
+              </Link>{" "}
+            </li>
+            <li>
+              <Link to={`Pricing`}>Pricing</Link>{" "}
+            </li>
+            <li>
+              <Link to={`Product`}>Product</Link>{" "}
+            </li>
+            <li>
+              <Link to={`AboutUs`}>About Us</Link>{" "}
+            </li>
           </ul>
           <ul className="right-side">
-            <li>Careers</li>
-            <li>Community</li>
-            <li>Privacy Policy</li>
+            <li>
+              <Link to={`Careers`}>Careers</Link>{" "}
+            </li>
+            <li>
+              <Link to={`Community`}>Community</Link>{" "}
+            </li>
+            <li>
+              <Link to={`PrivacyPolicy`}>Privacy Policy</Link>{" "}
+            </li>
           </ul>
         </div>
 

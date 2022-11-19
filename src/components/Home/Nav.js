@@ -50,7 +50,7 @@ function NavLinks() {
 
   const navElements = navLinksTexts.map((n, index) => (
     <li key={index}>
-      <Link to={`${n}`}>
+      <Link to={`${n === "About Us" ? "AboutUs" : n}`}>
         <button>{n}</button>
       </Link>
     </li>
