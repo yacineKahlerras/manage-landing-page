@@ -11,7 +11,7 @@
 this is a project that i made using the designs of frontend challenges
 it is a multiple page site in which i used [React-Router](https://reactrouter.com/en/main) (the routing
 is done using HashRouter and not the BrowserRouter because there is
-on backend server to solve the sub-url bug). i used [SwiperJS](https://swiperjs.com/) for the
+no backend server to solve the sub-url bug). i used [SwiperJS](https://swiperjs.com/) for the
 sliders and [ToastifyJS](https://www.npmjs.com/package/toastify-js?activeTab=readme) for the notifications, i also used [SASS/SCSS](https://sass-lang.com/) for
 the styling of the page. there's also an email validation where an error
 notification will show if the field is empty or has an invalid format.
